@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TARJETA MUSICAL </title>
+        <title>INVITACION DIGITAL </title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +9,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Mukta:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Dancing+Script&family=Parisienne&family=Allura&family=Alex+Brush&family=Sacramento&family=Caveat&family=Patrick+Hand&family=Indie+Flower&family=Shadows+Into+Light&family=Gloria+Hallelujah&family=Handlee&family=Satisfy&family=Montserrat&family=Raleway&family=Open+Sans&display=swap" rel="stylesheet">
 <style>
-/*ESTILO DE FONDO ANIMADO*/
-/*
-:root {
-  --gradient: linear-gradient(-45deg,black,purple, deeppink,white,deeppink,purple,black
-  );
-}
-*/
 
 /*cuerpo*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
 }
-
 body {
     display: flex;
     align-items: center;
@@ -36,20 +27,20 @@ body {
     background:black;
     flex-wrap: wrap;
     
-   font-family: basic-sans, sans-serif;
-   font-family:cursive;
+  
    font-size: 30px;
    Text-align:center;
    line-height: 1.6;
    color: #333;
 }
-
 /*contenedor principal*/
 .card {
     position: relative;
     width: 100%;
     height:100% ;
     border-radius: 5px;
+    box-shadow: 0 0 10px #decba5 ;
+      
     overflow: hidden;
     transition: .5s;
     margin: 10px 10px;
@@ -57,90 +48,52 @@ body {
    min-height: 100%;
    
     bottom:0;
-   
- 
-
-.card:hover {
-    box-shadow: 0 5px 10px rgba(0,0,0,1);
-    transform: translateY(-20px);
 }
+/*contenedores secundario*/
+.description1 {
 
 
-
-
-
-/*contenedor del texto*/
-.description {
- /*  height:100%*/
+  height:595px;
+   background-image:      url("https://i.ibb.co/Y4wVkhSN/fabi.jpg"); 
+  background-size:100%;
+    padding: 20px 20px 20px 20px;
+    
+    text-align: center;
+    animation: animate 20s infinite linear;
+    
+}
+.description2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ height:595px;
    background-image:      url("https://i.ibb.co/Y4wVkhSN/fabi.jpg"); 
   background-size:100%;
     padding: 20px 20px 20px 20px;
     
     text-align: center;
 }
-p{
-    font-size:22px;
-   /* color: #decba5;*/
-}
 
 
-
-/*imagen*/
-
-Img{
-    border: 1px deeppink solid;
-}
-
-Img:hover {
-    
-background-image: var(--gradiente);
-  
-    --gradiente: linear-gradient(to top,red,white,red
-    );
-     box-shadow: 0 5px 10px rgba(0,0,0,1);
-    transform: translateY(-20px);
+/*configuracion de texto*/
+p
+{ 
+font-family:Shadows Into Light;
+font-size: 21px;
 }
 h1{
+font-family:Shadows Into Light;
+/*font-family: Great Vibes;*/
      font-size: 50px;
     /* color: #decba5;*/
 }
-
 h2{
      font-size: 20px;
     /* color: #decba5;*/
 }
 
-  
+/*efecto color de texto*/
 
-
-
-
-
-*/
-.uno{
-    font-size:70px;
-    position: relative;
-    top:290px;
-    
-}
-
-.dos{
-    font-size:70px;
-    position: relative;
-    top:280px;
-    
-}
-
-
-#song{
-    display:none;
-     position: relative;
-    top:5000px;
-}
-
-
-animation: animate 20s infinite linear;
-}
 @keyframes animate
 {
     0%,100%{
@@ -157,29 +110,30 @@ animation: animate 20s infinite linear;
     }
 }
 
+/*imagen*/
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid #decba5;
+    width: 200px;
+  height:200px;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      height: auto;
+    }
+
+/*animacion de texto*/
 
 
-/*
-@keyframes entradaZoom {
-  0% {
-    transform: translateX(-100%) scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(30%) scale(1.1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-  }
+.animacion2{
+  animation: textoIzquierdaDerecha 2s ease-out forwards;
+}
+.animacion1{
+  animation: textoDerechaIzquierda 2s ease-out forwards;
 }
 
-p,h1{
-  animation: entradaZoom 2.5s ease-out forwards;
-}
-*/
-
+/*efecto animacion 1 y 2*/
 @keyframes textoIzquierdaDerecha {
   0% {
     transform: translateX(-100%) scale(0.8);
@@ -190,7 +144,6 @@ p,h1{
     opacity: 1;
   }
 }
-
 @keyframes textoDerechaIzquierda {
   0% {
     transform: translateX(100%) scale(0.8);
@@ -202,127 +155,195 @@ p,h1{
   }
 }
 
-/* Clases para aplicar a los textos */
-p {
-  animation: textoIzquierdaDerecha 2s ease-out forwards;
-}
-h1{
-  animation: textoDerechaIzquierda 2s ease-out forwards;
-}
 
-
+/*contador regresivo*/
 #contador {
   font-size:22px;
+  font-family:Shadows Into Light;
+  animation: zoomPulse 2s infinite ease-in-out,
+                 colorPulse 4s infinite linear;
  /* color: #333;*/
 /*  margin-top: 20px;*/
 }
+/* Animación */
+@keyframes zoomDesdeCentro {
+  0% {
+    transform: scale(0);   /* empieza muy pequeño */
+    opacity: 0;            /* invisible */
+  }
+  50% {
+    transform: scale(1.2); /* se expande un poco más */
+    opacity: 1;            /* aparece */
+  }
+  100% {
+    transform: scale(1);   /* queda en tamaño normal */
+    opacity: 1;
+  }
+}
+
+/*contenedor de ubicacion*/
 
 
+  .gps {
+  position: relative;
+  top: 20%;
+  right:60px;
+  
+  
+  display: center;
+  width: 165px;
+  
+      padding: 0px 0px;
+      border: 2px solid #decba5;   /* borde dorado LuzNet */
+      border-radius: 50px;         /* ovalado */
+      background-color: transparent; /* transparente para ver el fondo */
+      font-family:Shadows Into Light;
+      font-size: 22px;
+      color: #decba5;
+      text-align: center;
+      animation: zoomPulse 2s infinite ease-in-out,
+                 colorPulse 4s infinite linear;
+    }
+    /* Animación de zoom pulsante */
+    @keyframes zoomPulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    /* Animación de cambio de color */
+    @keyframes colorPulse {
+      0%, 100% { color: #decba5; }
+      50%      { color: white; }
+    }
+    /* Estilo del enlace */
+    .gps a {
+      text-decoration: none;
+      color: inherit; /* hereda el color del contenedor */
+    }
+    
+    
+    
+ .texto{
+     
+     position: relative;
+  left:80px;
+  top:-90px;
+  animation: animate 20s infinite linear;
+ }   
+    
+     p {
+      
+      animation: zoomGiro 3s ease-out forwards;
+    }
+
+    @keyframes zoomGiro {
+      0% {
+        transform: scale(0) rotate(0deg);   /* empieza pequeño */
+        opacity: 0;                         /* invisible */
+      }
+      50% {
+        transform: scale(1.2) rotate(180deg); /* crece y gira a la mitad */
+        opacity: 1;                           /* aparece */
+      }
+      100% {
+        transform: scale(1) rotate(360deg);   /* tamaño normal y giro completo */
+        opacity: 1;
+      }
+    }
+    
+    
 </style>
     </head>
     <body>
     <div class="card">
         
-    <div class="description">
+    <div class="description1">
     
    
-
     
     
-    <h1>
+    <h1 class="animacion1">
     <br />
         <br />Geologa <br />
     Fabiola guzman 
     </h1>
     
-    <!--p>
-        Gracias a mi familia, amigos <br /> y maestros por su apoyo.<br /> Este logro es también suyo,<br /> porque sin ustedes <br /> no habría llegado <br /> hasta aquí.
-    </p-->
     
     
-    <p>
+    
+    <p class="animacion2">
   Gracias a mi familia, amigos <br /> y maestros por su apoyo.<br />
   Este logro es también suyo,<br /> porque sin ustedes <br />
   no habría llegado <br /> hasta aquí.
 </p>
-
-
 </div>
-
 </div>
-
 <div class="card">
-
-<div class="description">
-    <p> <br /><br /><br /><br /><br />
+<div class="description1">
+    <p class="texto-zoom"> <br /><br /><br /><br /><br />
         Te invito a mi fiesta de graduación 
   <br />      el 5 de mayo a las 7pm <br /> en el Salón Real Aurora. <br /> ¡Será un honor celebrar contigo <br /> este logro!
   
     </p>
     
-    <p>🎓Falta poco para la fiesta 🎓 </p>
-<div id="contador"></div>
-
+    <p class="texto-zoom"
+    >🎓Falta poco para la fiesta 🎓 </p>
+<div class="texto-zoom"
+ id="contador"></div>
 <script>
 // Fecha de cumpleaños (2 de diciembre del año actual)
 const hoy = new Date();
 let year = hoy.getFullYear();
-
 // Si ya pasó el cumpleaños este año, se calcula para el próximo
 let cumple = new Date(year, 4, 5); // Mes 11 = diciembre (0 = enero)
 if (hoy > cumple) {
   cumple = new Date(year + 1, 11, 2);
 }
-
 function actualizarContador() {
   const ahora = new Date().getTime();
   const distancia = cumple.getTime() - ahora;
-
   // Cálculos
   const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
   const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
   const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
   // Mostrar en pantalla
   document.getElementById("contador").innerHTML =
     dias + " días " + horas + " horas <br />" + minutos + " minutos " + segundos + " segundos <br /> <br /> <br /> ";
-
   // Si ya llegó la fecha
   if (distancia < 0) {
     document.getElementById("contador").innerHTML = "🎉 ¡Feliz cumpleaños Felipe! 🎉";
   }
 }
-
 // Actualizar cada segundo
 setInterval(actualizarContador, 1000);
 </script>
     
 </div>
-
 </div>
-<!--div class="card">
-
-<div class="description">
+<div class="card">
+<div class="description2">
+<p class="texto">
+    Salon real aurora
+</p>
+<img src="https://i.ibb.co/LXL9Fs5T/240452927-1233421273840849-6245585595618016821-n-5-287979-163480146032313.jpg" alt="240452927-1233421273840849-6245585595618016821-n-5-287979-163480146032313" border="0">
     
+ <div class="gps">
+ 
+    <a href="https://maps.app.goo.gl/4um9YVqEmjJ7LZX8A" target="_blank">
+      <i class="fa fa-street-view" aria-hidden="true"></i> Ubicación
+    </a>
+  </div>
+ 
+  
+ 
     
-    
-    <div class="uno">
-    <i class="fa fa-hand-o-down" aria-hidden="true"></i><br />
-        
+  
+</div>
+   
     </div>
     
-    <audio controls autoplay id="song">
-        <source src="https://dl.dropbox.com/s/q33rjq45yazar5f/Pepe%20Aguilar%20%28Las%20Ma%C3%B1anitas%20Tapatias%29%20Con%20Banda%28MP3_320K%29.mp3?dl=0
-        " type="audio/mp3"></source>
-        
-  </audio>
     
-    <div class="dos">
-    <img width="200px" src="https://i.ibb.co/x6px3qL/images-13-20.jpg" alt="REGALO" border="0"onclick="play()">
-    </div>
-        
-    </div-->
     
     
             
